@@ -1,13 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/Header";
-
+import About from "./components/Pages/About";
+const router = createBrowserRouter([
+  { path: "/about", element: <About /> },
+  { path: "/", element: <Header /> },
+]);
 const App = () => {
-  return (
-    <Router>
-      <Header />
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
