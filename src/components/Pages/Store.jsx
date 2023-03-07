@@ -71,10 +71,10 @@ function Store() {
       </>
 
       <>
-        <h1 className="display-1 mt-5 p-5">Access Denied</h1>
+        {/* <h1 className="display-1 mt-5 p-5">Access Denied</h1>
         <h2 className="display-4 p-5">
           Signin/Signup to get access to Store page
-        </h2>
+        </h2> */}
       </>
     </>
   );
