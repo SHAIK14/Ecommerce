@@ -1,7 +1,7 @@
+import { useContext } from "react";
 import { Container, Button } from "react-bootstrap";
-
 import styles from "./Store.module.css";
-
+import ModalContext from "../store/modal-context";
 import StoreDataList from "../dataLists/StoreDataList";
 
 export const STOREDATA = [
@@ -32,6 +32,7 @@ export const STOREDATA = [
 ];
 
 function Store() {
+  const { cartModalHandler } = useContext(ModalContext);
   return (
     <>
       <>
@@ -66,7 +67,9 @@ function Store() {
         </Container>
 
         <div className="text-center mb-5">
-          <Button variant="primary">Show Cart</Button>
+          <Button variant="primary" onClick={cartModalHandler}>
+            Show Cart
+          </Button>
         </div>
       </>
 

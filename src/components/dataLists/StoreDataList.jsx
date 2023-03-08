@@ -1,9 +1,11 @@
+import { useContext } from "react";
 import { Button } from "react-bootstrap";
-
+import CartContext from "../store/cart-context";
 import styles from "../Pages/Store.module.css";
 import { Link } from "react-router-dom";
 
 function StoreDataList(props) {
+  const { addItem } = useContext(CartContext);
   return (
     <div>
       <h3
@@ -29,7 +31,13 @@ function StoreDataList(props) {
         <p style={{ fontFamily: "serif", paddingTop: "12px" }}>
           ${props.price.toFixed(2)}
         </p>
-        <Button variant="info" className="btn-sm">
+        <Button
+          variant="info"
+          className="btn-sm"
+          onClick={() => {
+            addItem(props.id, props.url, props.title, props.price);
+          }}
+        >
           ADD TO CART
         </Button>
       </div>

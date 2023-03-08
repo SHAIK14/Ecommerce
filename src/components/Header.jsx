@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { Navbar, Nav, Button, Badge } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
+import CartContext from "./store/cart-context";
+import ModalContext from "./store/modal-context";
 
 const Header = (props) => {
+  const { cartModalHandler, authModalHandler } = useContext(ModalContext);
+  const { totalItems } = useContext(CartContext);
   return (
     <Navbar
       bg="dark"
@@ -29,6 +34,17 @@ const Header = (props) => {
             Contact Us
           </NavLink>
         </Nav>
+        <Button
+          variant="info"
+          className="d-flex align-items-center mr-3"
+          size="lg"
+          onClick={cartModalHandler}
+        >
+          Cart
+          <Badge pill variant="light" className="ml-3 p-2">
+            {totalItems}
+          </Badge>
+        </Button>
       </Navbar.Collapse>
     </Navbar>
   );
