@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Spinner from "./components/Spinner";
 
 import Error from "./components/Pages/Error";
 import About from "./components/Pages/About";
@@ -9,7 +11,6 @@ import Store from "./components/Pages/Store";
 import ContactUs from "./components/Pages/ContactUs";
 import Products from "./components/Pages/Products";
 
-import Spinner from "./components/Spinner";
 import ModalPortal from "./components/modals/ModalPortal";
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="*" element={<Error />} />
         </Routes>
       </Suspense>
+      <Footer />
       <ModalPortal />
     </div>
   );
