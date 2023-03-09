@@ -12,21 +12,21 @@ function Footer() {
       <div className="d-flex">
         <Button variant="info mx-3">
           <img
-            src="https://toppng.com/uploads/preview/youtube-play-button-pn-11545514822bk31y8sdg5.png"
+            src="https://prasadyash2411.github.io/ecom-website/img/6260efc8fc9a9002669d2f4ad9956cc0.jpg"
             alt="Youtube"
             height="30px"
           />
         </Button>
         <Button variant="info mx-3">
           <img
-            src="https://www.pngplay.com/wp-content/uploads/13/Ig-Icon-PNG-Clipart-Background.png"
-            alt="Instagram"
+            src="https://prasadyash2411.github.io/ecom-website/img/Spotify%20Logo.png"
+            alt="spotify"
             height="30px"
           />
         </Button>
         <Button variant="info mx-3">
           <img
-            src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/7915717/facebook-icon-md.png"
+            src="https://prasadyash2411.github.io/ecom-website/img/Facebook%20Logo.png"
             alt="Facebook"
             height="30px"
           />
