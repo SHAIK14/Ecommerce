@@ -7,7 +7,7 @@ import Home from "./components/Pages/Home";
 import Store from "./components/Pages/Store";
 import ContactUs from "./components/Pages/ContactUs";
 import Products from "./components/Pages/Products";
-
+import ModalPortal from "./components/modals/ModalPortal";
 const App = () => {
   return (
     <div>
@@ -22,6 +22,7 @@ const App = () => {
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
+      <ModalPortal />
     </div>
   );
 };

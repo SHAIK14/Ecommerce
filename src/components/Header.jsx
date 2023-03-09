@@ -5,7 +5,7 @@ import CartContext from "./store/cart-context";
 import ModalContext from "./store/modal-context";
 
 const Header = (props) => {
-  const { cartModalHandler, authModalHandler } = useContext(ModalContext);
+  const { cartModalHandler } = useContext(ModalContext);
   const { totalItems } = useContext(CartContext);
   return (
     <Navbar

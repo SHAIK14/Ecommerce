@@ -10,7 +10,7 @@ function reducer(state, actions) {
     const { key, url, title, price } = actions.payload;
 
     if (key in items) {
-      items[key].count++;
+      items[key].count += 1;
     } else {
       items[key] = {
         count: 1,
@@ -25,7 +25,7 @@ function reducer(state, actions) {
     const { key } = actions.payload;
 
     if (items[key].count > 1) {
-      items[key].count--;
+      items[key].count -= 1;
     } else {
       delete items[key];
     }

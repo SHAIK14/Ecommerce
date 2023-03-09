@@ -16,7 +16,7 @@ function CartModalData(props) {
       <td>
         <Button
           variant="danger"
-          className="mr-5"
+          className="btn btn-primary mx-3"
           onClick={() => {
             removeItem(props.id);
           }}
@@ -25,6 +25,7 @@ function CartModalData(props) {
         </Button>
         <Button
           variant="success"
+          className="btn btn-primary mx-3"
           onClick={() => {
             addItem(props.id, props.url, props.title, props.price);
           }}

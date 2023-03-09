@@ -2,16 +2,16 @@ import { useState } from "react";
 import ModalContext from "./modal-context";
 
 function ModalContextProvider(props) {
-  // const [showAlertModal, setShowAlertModal] = useState(false);
-  // const [alertModalData, setAlertModalData] = useState({});
+  const [showAlertModal, setShowAlertModal] = useState(false);
+  const [alertModalData, setAlertModalData] = useState({});
   // const [showAuthModal, setShowAuthModal] = useState(false);
   // const [authModalData, setAuthModalData] = useState({});
   const [showCartModal, setShowCartModal] = useState(false);
 
-  // const alertModalHandler = (title, body, theme) => {
-  //   setAlertModalData({ title, body, theme });
-  //   setShowAlertModal((prev) => !prev);
-  // };
+  const alertModalHandler = (title, body, theme) => {
+    setAlertModalData({ title, body, theme });
+    setShowAlertModal((prev) => !prev);
+  };
 
   // const authModalHandler = (title, changePasswordOnly) => {
   //   setAuthModalData({ title, changePasswordOnly });
@@ -23,12 +23,12 @@ function ModalContextProvider(props) {
   };
 
   const modalContext = {
-    // showAlertModal,
-    // alertModalData,
+    showAlertModal,
+    alertModalData,
     // showAuthModal,
     // authModalData,
     showCartModal,
-    // alertModalHandler,
+    alertModalHandler,
     // authModalHandler,
     cartModalHandler,
   };
