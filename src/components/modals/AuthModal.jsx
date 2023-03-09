@@ -83,7 +83,7 @@ function AuthModal(props) {
     let url = "";
     let fetchBody = {};
 
-    if (props.title.toLowerCase() == "change password") {
+    if (props.title.toLowerCase() === "change password") {
       url =
         "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyB1Mwo70PKg-Kiy07h3RBan8TCdyIhkDJY";
 
@@ -98,12 +98,12 @@ function AuthModal(props) {
       return;
     }
 
-    if (props.title.toLowerCase() == "signup") {
+    if (props.title.toLowerCase() === "signup") {
       url =
         "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB1Mwo70PKg-Kiy07h3RBan8TCdyIhkDJY";
     }
 
-    if (props.title.toLowerCase() == "signin") {
+    if (props.title.toLowerCase() === "signin") {
       url =
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB1Mwo70PKg-Kiy07h3RBan8TCdyIhkDJY";
     }

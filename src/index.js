@@ -1,14 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/react-bootstrap/dist/react-bootstrap";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import ModalContextProvider from "./components/store/ModalContextProvider";
 import CartContextProvider from "./components/store/CartContextProvider";
-const root = ReactDOM.createRoot(document.getElementById("root"));
+import AuthContextProvider from "./components/store/AuthContextProvider";
+
+const root = createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <AuthContextProvider>
     <ModalContextProvider>
       <CartContextProvider>
         <BrowserRouter>
@@ -16,5 +19,5 @@ root.render(
         </BrowserRouter>
       </CartContextProvider>
     </ModalContextProvider>
-  </React.StrictMode>
+  </AuthContextProvider>
 );

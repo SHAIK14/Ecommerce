@@ -15,9 +15,9 @@ function About() {
         <img
           src="https://prasadyash2411.github.io/ecom-website/img/Band%20Members.png"
           alt="About us"
-          height="350px"
+          height="250px"
           style={{ borderRadius: "50%" }}
-          className="float-left mr-4"
+          className="float-left mr-1"
         />
         <div className="">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae

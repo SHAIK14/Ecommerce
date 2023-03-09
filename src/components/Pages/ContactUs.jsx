@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-
+import ModalContext from "../store/modal-context";
 function ContactUs() {
   const nameRef = useRef("");
   const messageRef = useRef("");
   const emailRef = useRef("");
+  const { alertModalHandler } = useContext(ModalContext);
 
   async function submitHandler(event) {
     event.preventDefault();
@@ -33,17 +34,17 @@ function ContactUs() {
       messageRef.current.value = "";
       emailRef.current.value = "";
 
-      //   alertModalHandler(
-      //     "Message Sent",
-      //     "Message Sent Successfully, we will reach you soon!",
-      //     "green"
-      //   );
+      alertModalHandler(
+        "Message Sent",
+        "Message Sent Successfully, we will reach you soon!",
+        "green"
+      );
     } catch (err) {
-      //   alertModalHandler(
-      //     "Message Not Sent",
-      //     "Something goes wrong!!! \nPlease try after sometime...",
-      //     ""
-      //   );
+      alertModalHandler(
+        "Message Not Sent",
+        "Something goes wrong!!! \nPlease try after sometime...",
+        ""
+      );
     }
   }
 

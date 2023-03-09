@@ -1,14 +1,14 @@
 import { createContext } from "react";
 
 const ModalContext = createContext({
-  // alertModalHandler: () => {},
-  // authModalHandler: () => {},
+  alertModalHandler: () => {},
+  authModalHandler: () => {},
   cartModalHandler: () => {},
-  // showAlertModal: "",
-  // showAuthModal: "",
+  showAlertModal: "",
+  showAuthModal: "",
   showCartModal: "",
-  // alertModalData: null,
-  // authModalData: null,
+  alertModalData: null,
+  authModalData: null,
 });
 
 export default ModalContext;
